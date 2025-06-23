@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TrainingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,6 @@ Route::middleware(['auth'])->group(function(){
         Auth::logout();
         return redirect('/');
     })->name('logout');
+
+    Route::get('new_training', [TrainingController::class, 'create'])->name('new_training');
 });
