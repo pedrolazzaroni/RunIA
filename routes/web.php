@@ -22,5 +22,5 @@ Route::middleware(['auth'])->group(function(){
         return redirect('/');
     })->name('logout');
 
-    Route::get('new_training', [TrainingController::class, 'create'])->name('new_training');
+    Route::get('new', [TrainingController::class, 'create'])->name('new_training');
 });
