@@ -9,10 +9,6 @@
             <p class="p-4 rounded-lg">RunIA é uma plataforma de IA que permite que você crie e execute modelos de IA de forma rápida e fácil.</p>
         </div>
 
-        {{
-            $errors->any() ? '<div class="bg-red-500 p-4 rounded-lg text-white">Erro: ' . $errors->first() . '</div>' : ''
-        }}
-
         <form action="{{route('login')}}" method="POST" class="p-4 bg-amber-50 w-auto rounded-lg flex flex-col gap-4 items-center justify-center">
             @csrf
             Faça login:
