@@ -18,5 +18,9 @@
     <div>
         @yield('content')
     </div>
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; {{ date('Y') }} RunIA. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Pedro Lazzaroni</p>
+    </footer>
 </body>
 </html>
