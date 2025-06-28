@@ -26,10 +26,13 @@
             Faça Registro:
             <label for="email">Email:</label>
             <input class="outline-red-300 bg-amber-300" type="email" name="email" id="email">
+
             <label for="name">Nome:</label>
             <input class="outline-red-300 bg-amber-300" type="name" name="name" id="name">
+
             <label for="password">Senha</label>
             <input class="outline-red-300 bg-amber-300" type="password" name="password" id="password">
+            
             <label for="password_confirmation">Confirmação de Senha</label>
             <input class="outline-red-300 bg-amber-300" type="password" name="password_confirmation" id="password_confirmation">
 
