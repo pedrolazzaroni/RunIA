@@ -24,7 +24,7 @@ class AuthController extends Controller
         ]);
 
         Auth::login($user);
-        
+
         if (!Auth::check()) {
             return redirect()->back()->withErrors(['Error' => 'Falha ao registrar usuário']);
         }
@@ -43,6 +43,7 @@ class AuthController extends Controller
             if (!Auth::check()) {
                 return redirect()->back()->withErrors(['Error' => 'Credenciais Inválidas']);
             }
+            
         return redirect()->route('dashboard');
     }
 }
