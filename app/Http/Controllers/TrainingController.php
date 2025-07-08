@@ -59,4 +59,18 @@ class TrainingController extends Controller
 
         return redirect()->route('dashboard')->with('success', 'Treinamento criado com sucesso!');
     }
+
+    public function history(){
+        $trainings = Training::where('user_id', Auth::id())->get();
+        return view('training.history', compact('trainings'));
+    }
+
+    public function delete($id){
+        $training = Training::find($id);
+        if($training && $training->user_id === Auth::id()){
+            $training->delete();
+            return redirect()->route('training.history')->with('success', 'Treinamento excluído com sucesso!');
+        }
+        return redirect()->route('training.history')->withErrors(['Error' => 'Treinamento não encontrado ou acesso negado']);   
+    }
 }

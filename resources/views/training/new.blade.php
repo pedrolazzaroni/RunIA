@@ -32,7 +32,7 @@
                     <h2 class="text-2xl font-bold text-center">Dados do Treino</h2>
                 </div>
 
-                <form action="{{route('create_training')}}" method="POST" class="p-8">
+                <form action="{{route('create.training')}}" method="POST" class="p-8">
                     @csrf
 
                     <!-- Display Errors -->
