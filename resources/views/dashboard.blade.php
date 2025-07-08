@@ -39,7 +39,11 @@
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span class="text-amber-700">Treinos Ativos:</span>
-                                <span class="font-semibold text-amber-800">0</span>
+                                <span class="font-semibold text-amber-800">
+                                    @if(session('success'))
+                                        {{ session('success') }}
+                                    @endif
+                                </span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-amber-700">Treinos Concluídos:</span>
