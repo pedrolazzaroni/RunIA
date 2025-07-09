@@ -11,13 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('training', function (Blueprint $table) {
+        Schema::create('trainings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('name');
-            $table->text('description');
-            $table->string('type');
-            $table->text('content')->nullable(); // Assuming content is the response from ChatGPT
+            $table->float('distance');
+            $table->float('duration');
+            $table->integer('total_calories');
+            $table->integer('steps');
+            $table->float('avg_pace');
+            $table->float('max_pace');
+            $table->integer('elevation_gain');
+            $table->integer('avg_heart_rate');
+            $table->integer('max_heart_rate');
+            $table->integer('avg_cadence');
+            $table->integer('max_cadence');
+            $table->float('vo2_max');
+            $table->string('source');
             $table->timestamps();
         });
     }

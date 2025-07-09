@@ -11,8 +11,24 @@ class Training extends Model
     protected $fillable = [
         'name',
         'user_id',
-        'description',
-        'type',
-        'content',
+        'distance',
+        'duration',
+        'pace',
+        'total_calories',
+        'steps',
+        'avg_pace',
+        'max_pace',
+        'elevation_gain',
+        'avg_heart_rate',
+        'max_heart_rate',
+        'avg_cadence',
+        'max_cadence',
+        'vo2_max',
+        'source',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
